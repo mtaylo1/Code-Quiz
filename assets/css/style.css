@@ -29,7 +29,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 54% 35%;
-  background-size: 726px 650px;  
+  background-size: cover;  
 }
 
 .card {
