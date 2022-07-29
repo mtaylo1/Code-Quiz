@@ -35,6 +35,7 @@ body {
 .card {
   max-width: 75%;
   margin-top: 14vh;
+  justify-content: center;
   color: #ffffff;
   padding: 7vw;
   background-position: 33.3%;
