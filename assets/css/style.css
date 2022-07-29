@@ -1,33 +1,52 @@
 *{
-  box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-body {
-  background-color: #b8c6db;
-  font-family: Georgia, 'Times New Roman', Times, serif
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
-
-}
-
+/*Header*/
 
 header {
   display: flex;
-  justify-content: space-between;
-  background-color: #218380;
-  padding: 3vh;
-  background-color: #fff;
-  align-self: flex-start;
+  text-align: right;
+  font-size: large;
+  background-color: #152688;
+  color:#ffffff;
+  padding: 0vh;
+  background-color: rgb(0, 0, 0);
+  align-self: flex-start; 
 }
 
+/*Body*/
+
+body {
+  background-color: #103a79;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  width: 1500px;
+  background-image: url(/assets/images/question-background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 54% 45%;
+  background-size: 726px 650px;  
+}
+
+.card {
+  max-width: 75%;
+  margin-top: 14vh;
+  color: #ffffff;
+  padding: 7vw;
+  background-position: 33.3%;
+  background-size: 620px 370px; 
+  border-radius: 5px;
+  border-color: lightgray;
+}
+
+/*Timer width*/
 time {
-  min-width: 85px;
+  min-width: px;
 }
-
 
 main {
   display: flex;
@@ -35,6 +54,7 @@ main {
   justify-content: center;
 }
 
+/*button*/
 
 .button {
   display: block;
@@ -49,36 +69,17 @@ main {
   display: inline-flex;
 }
 
-
-.card {
-  max-width: 75%;
-  margin-top: 15vh;
-  border: solid;
-  border-width: 4px;
-  padding: 7vw;
-  border-radius: 35px;
-  border-color: lightgray;
-}
-
-
-
-#start-screen {
-  display: inline;
-  text-align: center;
-}
-
-
-
 .option-button {
   width: 100%;
   text-align: left;
   margin: 5px;
 }
 
+/*Question and high score styles*/
+
 #result-div {
   display: none;
 }
-
 
 .inline-form {
   display: flex;
@@ -92,7 +93,6 @@ main {
   padding: 1vh;
 }
 
-
 #back-button {
   margin-right: 8px;
 }
@@ -101,13 +101,12 @@ main {
   padding-inline-start: 20px;
 }
 
-
+/*Media Queries*/
 @media screen and (min-width: 850px) {
   .card {
     max-width: 680px;
   }
 }
-
 
 @media (hover) {
 
@@ -116,10 +115,6 @@ main {
   }
 
   button:hover {
-    background-color: rgba(50, 111, 168, 0.5);
+    background-color: rgba(89, 153, 212, 0.5);
   }
-}
-
-
-
-  
+} 

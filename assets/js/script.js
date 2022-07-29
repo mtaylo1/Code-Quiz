@@ -69,6 +69,7 @@ function hideCards() {
   leaderboardCard.setAttribute("hidden", true);
 }
 
+//results section
 const resultDiv = document.querySelector("#result-div");
 const resultText = document.querySelector("#result-text");
 
@@ -103,7 +104,7 @@ function startQuiz() {
   displayTime();
 }
 
-
+//stops quiz when time runs out 
 function countdown() {
   time--;
   displayTime();
@@ -112,11 +113,13 @@ function countdown() {
   }
 }
 
+//inserts time on page
 const timeDisplay = document.querySelector("#time");
 function displayTime() {
   timeDisplay.textContent = time;
 }
 
+//shows question and answers
 function displayQuestion() {
   let question = questions[currentQuestion];
   let options = question.options;
@@ -131,15 +134,14 @@ function displayQuestion() {
   }
 }
 
-
+//checks the current questions displayed and selects the answer
 document.querySelector("#quiz-options").addEventListener("click", checkAnswer);
-
 
 function optionIsCorrect(optionButton) {
   return optionButton.textContent === questions[currentQuestion].answer;
 }
 
-
+//reduces time when answer incorrect, 
 function checkAnswer(eventObject) {
   let optionButton = eventObject.target;
   resultDiv.style.display = "block";
@@ -160,7 +162,7 @@ function checkAnswer(eventObject) {
     }
   }
 
-
+//prceeds to next question
   currentQuestion++;
   
   if (currentQuestion < questions.length) {
@@ -170,10 +172,10 @@ function checkAnswer(eventObject) {
   }
 }
 
-
+//shows score
 const score = document.querySelector("#score");
 
-
+//clears timer and shows the score which is the remaining time
 function endQuiz() {
   clearInterval(intervalID);
   hideCards();
@@ -184,9 +186,11 @@ function endQuiz() {
 const submitButton = document.querySelector("#submit-button");
 const inputElement = document.querySelector("#initials");
 
-
+//allows user to submit and store score 
 submitButton.addEventListener("click", storeScore);
 
+
+//allows user to enter name and store score 
 function storeScore(event) {
  
   event.preventDefault();
@@ -213,6 +217,7 @@ function storeScore(event) {
 }
 
 
+//uses JSON to store leaderboard 
 function updateStoredLeaderboard(leaderboardItem) {
   let leaderboardArray = getLeaderboard();
 
@@ -221,7 +226,7 @@ function updateStoredLeaderboard(leaderboardItem) {
   localStorage.setItem("leaderboardArray", JSON.stringify(leaderboardArray));
 }
 
-
+//retreives leaderboard
 function getLeaderboard() {
   let storedLeaderboard = localStorage.getItem("leaderboardArray");
   if (storedLeaderboard !== null) {
@@ -233,7 +238,7 @@ function getLeaderboard() {
   return leaderboardArray;
 }
 
-
+//shows leaderboard
 function renderLeaderboard() {
   let sortedLeaderboardArray = sortLeaderboard();
   const highscoreList = document.querySelector("#highscore-list");
@@ -247,6 +252,7 @@ function renderLeaderboard() {
   }
 }
 
+//sort leaderboard
 function sortLeaderboard() {
   let leaderboardArray = getLeaderboard();
   if (!leaderboardArray) {
@@ -259,6 +265,7 @@ function sortLeaderboard() {
   return leaderboardArray;
 }
 
+//section to clear leaderboard
 const clearButton = document.querySelector("#clear-button");
 clearButton.addEventListener("click", clearHighscores);
 
@@ -277,7 +284,7 @@ function returnToStart() {
   startCard.removeAttribute("hidden");
 }
 
-
+//click to view high scores
 const leaderboardLink = document.querySelector("#leaderboard-link");
 leaderboardLink.addEventListener("click", showLeaderboard);
 
