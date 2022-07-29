@@ -6,7 +6,7 @@ This is my Fourth assignment. In this one I am required to create a coding quiz 
 
 # Screenshots
 
-
+https://mtaylo1.github.io/Code-Quiz/assets/images/screenshot.PNG
 
 # Roadmap
 There isn't really much unless I need to revise for another assignment/project.
