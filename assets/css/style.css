@@ -25,10 +25,10 @@ body {
   height: 100vh;
   overflow: hidden;
   width: 1500px;
-  background-image: url("../images/question-background.jpg");  
+  background-image: url("../images/question-background.jpg"); 
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: 54% 35%;
+  background-position: 64% 35%;
   background-size: 726px 650px;  
 }
 
